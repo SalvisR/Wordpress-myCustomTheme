@@ -15,6 +15,11 @@ add_action('wp_enqueue_scripts', 'scripts');
 add_theme_support('menus');
 // Add post thumbnails
 add_theme_support('post-thumbnails');
+// Add widgets
+add_theme_support('widgets');
+
+
+
 
 // Menus
 register_nav_menus(array('main-menu' => 'Main Menu', 'mobilde-menu' => 'Mobile Menu'));

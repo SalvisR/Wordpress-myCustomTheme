@@ -381,6 +381,40 @@ header .search-container .exit-btn:hover {
   padding-left: 15px;
 }
 
+.wpcf7-form {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+.wpcf7-form__label {
+  font-size: 0.9rem;
+  color: #757575;
+}
+.wpcf7-form p,
+.wpcf7-form textarea {
+  width: 100%;
+  padding: 0;
+  margin-top: 1rem;
+}
+.wpcf7-form input {
+  width: 100%;
+  height: 2rem;
+}
+.wpcf7-form input[type=submit] {
+  width: 7rem;
+  height: initial;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background-color: #BFBFBF;
+  font-size: 1rem;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.wpcf7-form input[type=submit]:hover {
+  background-color: #F2060B;
+  color: #ffffff;
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
