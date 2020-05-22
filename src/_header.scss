@@ -1,0 +1,197 @@
+header {
+    width: 100vw;
+    height: 85vh;
+    max-width: 100%;
+    display: initial;
+
+    .header-image {
+        width: 100%;
+        height: calc(85vh - 65px);
+        box-sizing: border-box;
+        background-image: url('/wp-content/themes/myCustomTheme/src/img/skiing-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        div {
+            z-index: 1;
+            text-align: center;
+            color: $textWhite;
+        }
+
+        h1 {
+            font-weight: 100;
+            font-size: 5.3rem;
+            border-bottom: solid 2px $textWhite;
+            line-height: 5rem;
+            color: $textWhite;
+
+            span {
+                font-style: italic;
+            }
+        }
+
+        .underline-text {
+            text-transform: uppercase;
+            font-size: .8rem;
+            line-height: 2rem;
+        }
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        display: block;
+        background-color: $darkGrey;
+        height: 65px;
+        color: $textWhite;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+
+        li {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
+
+            a {
+                color: $textWhite;
+
+
+            }
+
+            &:hover {
+                a {
+                    color: $red;
+                }
+            }
+        }
+
+        .logo {
+            position: relative;
+            background-color: $red;
+            height: 100%;
+            width: 70px;
+            display: block;
+            font-family: arial, sans-serif;
+            font-size: 2.5rem;
+            margin-right: 20px;
+
+            a {
+                width: 100%;
+                height: 100%;
+                color: $textWhite;
+
+                &:before {
+                    content: 'W';
+                    position: absolute;
+                    top: 50%;
+                    left: 40%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &:after {
+                    content: 'P';
+                    position: absolute;
+                    top: 50%;
+                    left: 70%;
+                    transform: translate(-50%, -50%) rotate(16deg);
+                }
+            }
+        }
+
+        .search-icon {
+            position: relative;
+            height: 100%;
+            width: 60px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 20%;
+                left: 10%;
+                width: 24px;
+                height: 24px;
+                border: 2px solid $textWhite;
+                border-radius: 50%;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 55%;
+                width: 4px;
+                height: 15px;
+                background-color: $textWhite;
+                transform: rotate(45deg);
+            }
+
+            &:hover {
+                &:before {
+                    border-color: $red;
+                }
+
+                &:after {
+                    background-color: $red;
+                }
+            }
+        }
+    }
+
+    .search-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, .8);
+        justify-content: center;
+        padding-top: 10rem;
+        backdrop-filter: blur(5px);
+
+        .exit-btn {
+            position: absolute;
+            top: 8rem;
+            right: calc((100% - 62%) / 2);
+            text-transform: uppercase;
+            color: $lightGrey;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                color: $textWhite;
+            }
+        }
+    }
+}

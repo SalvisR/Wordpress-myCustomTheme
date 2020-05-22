@@ -1,0 +1,34 @@
+.container {
+    width: 85%;
+    margin: 50px auto;
+}
+
+.content {
+    padding-top: 2rem;
+    background-color: $whiteBg;
+    padding: 5rem 0;
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding: 0 0 2rem 8rem;
+        color: $textGrey;
+    }
+
+    p {
+        color: $textGrey;
+        padding: 0 8rem;
+    }
+
+    img {
+        width: 100%;
+        padding-top: 3rem;
+    }
+}
